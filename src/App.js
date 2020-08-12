@@ -10,6 +10,7 @@ import {
 
 import DashboardPage from './pages/DashboardPage';
 import PostsPages from './pages/PostsPages';
+import SinglePost from './components/SinglePost'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={DashboardPage} />
             <Route exact path="/posts" component={PostsPages} />
+            <Route exact path="/post/:postID" component={SinglePost} />
             <Redirect to="/" />
           </Switch>
         </Router>
